@@ -26,25 +26,34 @@ const freelanceProfiles = [
   }
 ];
 
+const ContainerDiv = styled.div`
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
 const ContainerText = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const CardsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 24px;
   grid-template-rows: 350px 350px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 `;
 
 function Freelances() {
   return (
-    <div>
+    <ContainerDiv>
       <ContainerText>
         <h1>Trouver votre prestataire</h1>
-        <span>Chez Shiny nous réunissons les meilleurs profils pour vous.</span>
+        <p>Chez Shiny nous réunissons les meilleurs profils pour vous.</p>
       </ContainerText>
       <CardsContainer>
         {freelanceProfiles.map((profile, index) => (
@@ -55,7 +64,7 @@ function Freelances() {
           />
         ))}
       </CardsContainer>
-    </div>
+    </ContainerDiv>
   );
 }
 

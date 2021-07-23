@@ -5,24 +5,31 @@ import styled from "styled-components";
 import colors from "../../utils/style/colors";
 
 const CardLabel = styled.span`
-  color: #5843e4;
+  font-family: Trebuchet MS;
+  font-style: normal;
+  font-weight: normal;
   font-size: 22px;
-  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+  color: #5843e4;
 `;
 
 const CardImage = styled.img`
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
+  width: 148px;
+  height: 148px;
+  border-radius: 90px;
 `;
 
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   padding: 15px;
   background-color: ${colors.backgroundLight};
   border-radius: 30px;
-  width: 350px;
+  width: 339px;
+  height: 334px;
   transition: 200ms;
   &:hover {
     cursor: pointer;
