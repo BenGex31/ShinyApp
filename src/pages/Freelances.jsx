@@ -26,6 +26,10 @@ const freelanceProfiles = [
   }
 ];
 
+const ContainerText = styled.div`
+  display: flex;
+`;
+
 const CardsContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -38,7 +42,10 @@ const CardsContainer = styled.div`
 function Freelances() {
   return (
     <div>
-      <h1>Freelances</h1>
+      <ContainerText>
+        <h1>Trouver votre prestataire</h1>
+        <span>Chez Shiny nous réunissons les meilleurs profils pour vous.</span>
+      </ContainerText>
       <CardsContainer>
         {freelanceProfiles.map((profile, index) => (
           <Card
