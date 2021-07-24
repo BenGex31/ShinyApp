@@ -19,9 +19,10 @@ const DivContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 62px;
-  margin-left: 62px;
-  margin-top: 62px;
+  margin-right: 31px;
+  margin-left: 31px;
+  margin-top: 31px;
+  margin-bottom: 50px;
 `;
 
 function Header() {
