@@ -2,10 +2,11 @@
 
 # Created with CodeSandbox
 
-OpenClassrooms - React intermédiaire
+# OpenClassrooms - React intermédiaire
+
 Ce repo contient le code de l'API dont vous aurez besoin pour le cours OpenClassrooms ------. Il va de paire avec le repository de la partie frontend.
 
-# Lancer l'API en local
+## Lancer l'API en local
 
 Pour suivre le cours, vous aurez besoin d'installer l'API en local sur votre machine. Pour cela :
 
@@ -13,7 +14,7 @@ Pour suivre le cours, vous aurez besoin d'installer l'API en local sur votre mac
 2.Installez les node_modules avec yarn
 3.Faites tourner l'API avec yarn start
 
-# Consommer l 'API
+## Consommer l 'API
 
 L'API Shiny est une API REST. Si vous avez un doute sur ce qu'est une API REST, n'hésitez pas à jeter un oeil à l'excellent cours Adoptez les API REST pour vos projets web. . Une fois lancée, cette API met plusieurs routes à votre disposition :
 
@@ -25,6 +26,6 @@ L'API Shiny est une API REST. Si vous avez un doute sur ce qu'est une API REST, 
 
 - La route pour obtenir le résultat du questionnaire : GET /results/?a1={answer1}&a2={answer2}&a3={answer3}...
 
-# Modifier l'API
+## Modifier l'API
 
 N'hésitez pas à explorer l'API pour tester. Cette base de code a été initialisée avec Express Generator.
