@@ -56,6 +56,10 @@ function Survey() {
     fetchSurvey();
   });
 
+  if (error) {
+    return <span>Oups il y a eu un problème</span>;
+  }
+
   /*useEffect(() => {
     setDataLoading(true);
     fetch(`http://localhost:8000/survey`).then((response) =>
