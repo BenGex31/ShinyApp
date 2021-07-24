@@ -7,6 +7,7 @@ import Survey from "./pages/Survey";
 import Error from "./components/Error";
 import Results from "./pages/Results";
 import Freelances from "./pages/Freelances";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Error />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
