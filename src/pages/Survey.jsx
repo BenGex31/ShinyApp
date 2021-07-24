@@ -37,20 +37,26 @@ function Survey() {
   const nextQuestionNumber = questionNumberInt + 1;
   const [surveyData, setSurveyData] = useState({});
   const [isDataLoading, setDataLoading] = useState(false);
-
-  /*async function fetchData() {
-    try {
-      const response = await fetch(`http://localhost:8000/survey`);
-      const { surveyData } = await response.json();
-      setSurveyData(surveyData);
-    } catch (error) {
-      console.log("===== error =====", error);
-      setError(true);
-    }
-  }*/
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    //fetchData();
+    async function fetchSurvey() {
+      setDataLoading(true);
+      try {
+        const response = await fetch(`http://localhost:8000/survey`);
+        const { surveyData } = await response.json();
+        setSurveyData(surveyData);
+      } catch (err) {
+        console.log(err);
+        setError(true);
+      } finally {
+        setDataLoading(false);
+      }
+    }
+    fetchSurvey();
+  });
+
+  /*useEffect(() => {
     setDataLoading(true);
     fetch(`http://localhost:8000/survey`).then((response) =>
       response.json().then(({ surveyData }) => {
@@ -58,7 +64,7 @@ function Survey() {
         setDataLoading(false);
       })
     );
-  }, []);
+  }, []);*/
 
   return (
     <SurveyContainer>
