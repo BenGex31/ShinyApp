@@ -5,6 +5,7 @@ import styled from "styled-components";
 import colors from "../utils/style/colors";
 import { Loader } from "../utils/style/Atom";
 
+// eslint-disable-next-line
 const freelanceProfiles = [
   {
     name: "Jane Doe",
