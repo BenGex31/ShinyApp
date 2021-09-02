@@ -1,7 +1,5 @@
 # ShinyApp
 
-# Created with CodeSandbox
-
 # OpenClassrooms - React intermédiaire
 
 Ce repo contient le code de l'API dont vous aurez besoin pour le cours OpenClassrooms ------. Il va de paire avec le repository de la partie frontend.
