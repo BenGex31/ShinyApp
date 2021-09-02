@@ -1,33 +1,9 @@
 import React, { useState, useEffect } from "react";
-import DefaultPicture from "../assets/user-img.png";
 import Card from "../components/Card";
 import styled from "styled-components";
 import colors from "../utils/style/colors";
 import { Loader } from "../utils/style/Atom";
-
-// eslint-disable-next-line
-const freelanceProfiles = [
-  {
-    name: "Jane Doe",
-    jobTitle: "Devops",
-    picture: DefaultPicture
-  },
-  {
-    name: "John Doe",
-    jobTitle: "Developpeur frontend",
-    picture: DefaultPicture
-  },
-  {
-    name: "Jeanne Biche",
-    jobTitle: "Développeuse Fullstack",
-    picture: DefaultPicture
-  },
-  {
-    name: "Lauren Ipsum",
-    jobTitle: "UX Designer",
-    picture: DefaultPicture
-  }
-];
+import { useTheme } from "../utils/hooks";
 
 const CardsContainer = styled.div`
   display: grid;
@@ -40,7 +16,7 @@ const CardsContainer = styled.div`
 
 const PageTitle = styled.h1`
   font-size: 30px;
-  color: black;
+  color: ${({ theme }) => (theme === "light" ? "#000000" : "#5843E4")};
   text-align: center;
   padding-bottom: 30px;
 `;
@@ -62,6 +38,7 @@ function Freelances() {
   const [isDataLoading, setDataLoading] = useState(false);
   const [error, setError] = useState(false);
   const [freelancersList, setFreelancesList] = useState([]);
+  const { theme } = useTheme();
 
   useEffect(() => {
     async function fetchFreelances() {
@@ -86,7 +63,7 @@ function Freelances() {
 
   return (
     <div>
-      <PageTitle>Trouvez votre prestataire</PageTitle>
+      <PageTitle theme={theme}>Trouvez votre prestataire</PageTitle>
       <PageSubtitle>
         Chez Shiny nous réunissons les meilleurs profils pour vous.
       </PageSubtitle>
