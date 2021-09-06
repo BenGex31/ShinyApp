@@ -1,6 +1,12 @@
 import { formatJobList } from "./Results";
 
-test("Ceci est mon premier test", () => {
-  const expectedState = "item2,";
-  expect(formatJobList("item2", 3, 1)).toEqual(expectedState);
+describe("La fonction formatJobList", () => {
+  test("ajoute une virgule à un item", () => {
+    const expectedState = "item2,";
+    expect(formatJobList("item2", 3, 1)).toEqual(expectedState);
+  });
+  test("ne mets pas de virgule pour le dernier élément", () => {
+    const expectedState = "item3";
+    expect(formatJobList("item3", 3, 2)).toEqual(expectedState);
+  });
 });
