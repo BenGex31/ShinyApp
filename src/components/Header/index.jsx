@@ -28,7 +28,9 @@ const DivContainer = styled.div`
 function Header() {
   return (
     <DivContainer>
-      <img src={lightLogo} alt="light-logo" />
+      <Link to="/">
+        <img src={lightLogo} alt="light-logo" />
+      </Link>
       <nav>
         <StyledLink to="/">Accueil</StyledLink>
         <StyledLink to="/freelances">Profils</StyledLink>
